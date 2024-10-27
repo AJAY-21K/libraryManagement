@@ -1,7 +1,9 @@
 package com.example.libraryManagement.CustomerController;
 
-import com.example.libraryManagement.CustomerDTO.CustomerDTO;
-import com.example.libraryManagement.Service.CustomerService;
+
+import com.example.libraryManagement.CustomerService.CustomerService;
+import com.example.libraryManagement.DTO.CustomerDTO;
+import com.example.libraryManagement.DTO.CustomerSaveDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +16,9 @@ public class CustomerController {
 
 
     @PostMapping(path = "/save")
-    public String saveCustomer(@RequestBody CustomerDTO customerDTO){
-        String id = customerService.addCustomr(customerDTO);
-        re
+    public String saveCustomer(@RequestBody CustomerSaveDTO customerSaveDTO){
+        String id = customerService.addCustomer(customerSaveDTO);
+        return id;
 
     }
 
