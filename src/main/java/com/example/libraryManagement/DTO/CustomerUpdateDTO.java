@@ -6,13 +6,13 @@ public class CustomerUpdateDTO {
     private int customerId;
     private String customerName;
     private String customerAddress;
-    private String mobile;
+    private int mobile;
 
     public CustomerUpdateDTO() {
     }
 
 
-    public CustomerUpdateDTO(int customerId, String customerName, String customerAddress, String mobile) {
+    public CustomerUpdateDTO(int customerId, String customerName, String customerAddress, int mobile) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerAddress = customerAddress;
@@ -43,11 +43,11 @@ public class CustomerUpdateDTO {
         this.customerAddress = customerAddress;
     }
 
-    public String getMobile() {
+    public int getMobile() {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
+    public void setMobile(int mobile) {
         this.mobile = mobile;
     }
 

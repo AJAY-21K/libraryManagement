@@ -1,28 +1,29 @@
 package com.example.libraryManagement.DTO;
 
-import jakarta.persistence.Column;
-
 public class CustomerDTO {
 
     private int customerId;
     private String customerName;
     private String customerAddress;
-    private String mobile;
+    private int mobile;
 
     public CustomerDTO() {
     }
 
-    public CustomerDTO(String customerName, String customerAddress, String mobile) {
+    public CustomerDTO(String customerName, String customerAddress, int mobile) {
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.mobile = mobile;
     }
 
-    public CustomerDTO(int customerId, String customerName, String customerAddress, String mobile) {
+    public CustomerDTO(int customerId, String customerName, String customerAddress, int mobile) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.mobile = mobile;
+    }
+
+    public CustomerDTO(int customerId) {
     }
 
     public int getCustomerId() {
@@ -49,11 +50,11 @@ public class CustomerDTO {
         this.customerAddress = customerAddress;
     }
 
-    public String getMobile() {
+    public int getMobile() {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
+    public void setMobile(int mobile) {
         this.mobile = mobile;
     }
 

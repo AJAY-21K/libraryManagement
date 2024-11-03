@@ -2,6 +2,7 @@ package com.example.libraryManagement.Entity;
 
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "customer")
 public class Customer {
 
@@ -17,22 +18,22 @@ public class Customer {
     private String customerAddress;
 
     @Column(name = "mobile", length = 10)
-    private String mobile;
+    private int mobile;
 
-    public Customer() {
-    }
-
-    public Customer(String customerName, String customerAddress, String mobile) {
-        this.customerName = customerName;
-        this.customerAddress = customerAddress;
-        this.mobile = mobile;
-    }
-
-    public Customer(int customerId, String customerName, String customerAddress, String mobile) {
+    public Customer(int customerId, String customerName, String customerAddress, int mobile) {
         this.customerId = customerId;
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.mobile = mobile;
+    }
+
+    public Customer(String customerName, String customerAddress, int mobile) {
+        this.customerName = customerName;
+        this.customerAddress = customerAddress;
+        this.mobile = mobile;
+    }
+
+    public Customer() {
     }
 
     public int getCustomerId() {
@@ -59,11 +60,11 @@ public class Customer {
         this.customerAddress = customerAddress;
     }
 
-    public String getMobile() {
+    public int getMobile() {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
+    public void setMobile(int mobile) {
         this.mobile = mobile;
     }
 

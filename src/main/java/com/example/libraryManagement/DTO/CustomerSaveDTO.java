@@ -3,10 +3,10 @@ package com.example.libraryManagement.DTO;
 public class CustomerSaveDTO {
     private String customerName;
     private String customerAddress;
-    private String mobile;
+    private int mobile;
 
 
-    public CustomerSaveDTO(String customerName, String customerAddress, String mobile) {
+    public CustomerSaveDTO(String customerName, String customerAddress, int mobile) {
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.mobile = mobile;
@@ -33,11 +33,11 @@ public class CustomerSaveDTO {
         this.customerAddress = customerAddress;
     }
 
-    public String getMobile() {
+    public int getMobile() {
         return mobile;
     }
 
-    public void setMobile(String mobile) {
+    public void setMobile(int mobile) {
         this.mobile = mobile;
     }
 
