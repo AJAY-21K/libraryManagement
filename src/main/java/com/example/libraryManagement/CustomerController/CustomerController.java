@@ -24,15 +24,10 @@ public class CustomerController {
 
     }
     @GetMapping(path = "/getAll")
-    public List<CustomerDTO> getAllCustomer()
-    {
-        List<CustomerDTO>allCustomers = customerService.getAllCustomer();
+    public List<CustomerDTO> getAllCustomer() {
+        List<CustomerDTO> allCustomers = customerService.getAllCustomer();
         return allCustomers;
 
-    }
-    public Product getProductById(Long id){
-        log.debug("fetching user by {id}",id);
-        return productRepo.findById(id).orElse(null);
     }
 
 }
