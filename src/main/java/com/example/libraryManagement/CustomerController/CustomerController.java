@@ -30,5 +30,9 @@ public class CustomerController {
         return allCustomers;
 
     }
+    public Product getProductById(Long id){
+        log.debug("fetching user by {id}",id);
+        return productRepo.findById(id).orElse(null);
+    }
 
 }
